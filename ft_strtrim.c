@@ -6,7 +6,7 @@
 /*   By: kparis <kparis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 11:41:39 by kparis            #+#    #+#             */
-/*   Updated: 2019/10/15 17:22:44 by kparis           ###   ########.fr       */
+/*   Updated: 2019/10/16 15:01:58 by kparis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		len = ft_strlen(ptr_start);
 	else
 		len = get_newlen(ptr_start, ptr_end);
-	if (!(str = malloc(sizeof(char) * len + 1)))
+	if (!(str = malloc(sizeof(char) * len + 2)))
 		return (0);
 	while (ptr_start != ptr_end)
 		str[i++] = *ptr_start++;

@@ -6,7 +6,7 @@
 /*   By: kparis <kparis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:47:36 by kparis            #+#    #+#             */
-/*   Updated: 2019/10/15 16:22:28 by kparis           ###   ########.fr       */
+/*   Updated: 2019/10/17 15:12:02 by kparis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int				ft_isascii(int c);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
 void			*ft_memccpy(void *dest, const void *src, int c, size_t size);
-void			*ft_memchr(const void *str, int c, size_t size);
+void			*ft_memchr(const void *str, int c, size_t n);
 int				ft_memcmp(const void *str1, const void *str2, size_t size);
 void			*ft_memcpy(void *dest, const void *src, size_t size);
 void			*ft_memmove(void *dest, const void *src, size_t size);
