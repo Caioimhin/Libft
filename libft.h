@@ -6,7 +6,7 @@
 /*   By: kparis <kparis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:47:36 by kparis            #+#    #+#             */
-/*   Updated: 2019/10/17 15:12:02 by kparis           ###   ########.fr       */
+/*   Updated: 2020/02/07 12:35:26 by kparis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct	s_struct
+{
+	char	*buf;
+	char	*str;
+	char	*tmp;
+	int		nb_read;
+	int		init;
+}				t_struct;
 
 int				ft_atoi(const char *str);
 void			*ft_bzero(void *ptr, size_t size);
@@ -49,4 +58,11 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+void			ft_putchar(char c);
+void			ft_putstr(char *s);
+void			ft_putnbr(int n);
+void			ft_putendl(char *s);
+int				get_next_line(int fd, char **line);
+char			*ft_convert_base(long long nbr, char *base);
+int				*ft_realloc_int(int *tab, int size, int nbr);
 #endif

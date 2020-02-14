@@ -6,7 +6,7 @@
 #    By: kparis <kparis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/09 15:54:25 by kparis            #+#    #+#              #
-#    Updated: 2019/10/21 10:37:39 by kparis           ###   ########.fr        #
+#    Updated: 2020/02/07 12:35:40 by kparis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,19 +45,28 @@ SRC =	ft_atoi.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c \
+		ft_putchar.c \
+		ft_putstr.c \
+		ft_putnbr.c \
+		ft_putendl.c \
+		ft_convert_base.c \
+		ft_realloc_int.c \
+		get_next_line.c
 
 OBJ = $(SRC:.c=.o)
 CFLAGS += -Wall -Wextra -Werror -I./
 CC = gcc
 .c.o:
-		$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+		@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 $(NAME):	$(OBJ)
-			ar -rc $(NAME) $(OBJ)
+			@ar -rc $(NAME) $(OBJ)
+			@echo "\033[92mLibft Done\033[0m"
 all:		$(NAME)
 clean:
-			rm -f $(OBJ)
+			@rm -f $(OBJ)
+			@echo "\033[92mLibft Clean\033[0m"
 fclean:		clean
-			rm -f $(NAME)
+			@rm -f $(NAME)
 re:		fclean all
 .PHONY:		all clean fclean re
