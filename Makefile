@@ -6,7 +6,7 @@
 #    By: kparis <kparis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/09 15:54:25 by kparis            #+#    #+#              #
-#    Updated: 2020/02/07 12:35:40 by kparis           ###   ########.fr        #
+#    Updated: 2020/03/18 23:38:58 by kparis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,10 +52,14 @@ SRC =	ft_atoi.c \
 		ft_putendl.c \
 		ft_convert_base.c \
 		ft_realloc_int.c \
+		ft_realloc_char.c \
+		ft_str_tab_len.c \
+		ft_free_str_tab.c \
+		ft_realloc_char_tab.c \
 		get_next_line.c
 
 OBJ = $(SRC:.c=.o)
-CFLAGS += -Wall -Wextra -Werror -I./
+CFLAGS += -Wall -Wextra -Werror -g -fsanitize=address -I./
 CC = gcc
 .c.o:
 		@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)

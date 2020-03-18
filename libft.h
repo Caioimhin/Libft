@@ -6,7 +6,7 @@
 /*   By: kparis <kparis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:47:36 by kparis            #+#    #+#             */
-/*   Updated: 2020/02/07 12:35:26 by kparis           ###   ########.fr       */
+/*   Updated: 2020/03/18 23:38:21 by kparis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,8 @@ void			ft_putendl(char *s);
 int				get_next_line(int fd, char **line);
 char			*ft_convert_base(long long nbr, char *base);
 int				*ft_realloc_int(int *tab, int size, int nbr);
+char			*ft_realloc_char(char *str, char c);
+int				ft_str_tab_len(char **tab);
+void			ft_free_str_tab(char **tab, int size);
+char		**ft_realloc_char_tab(char **tab, char *str);
 #endif
